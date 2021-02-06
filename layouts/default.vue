@@ -1,9 +1,12 @@
 <template>
   <div>
+    <br>
     <div class="container">
       <NuxtLink to="/">Главная</NuxtLink>
+      &nbsp;&nbsp;
       <NuxtLink to="/headers-and-paragraphs">Заголовки и параграфы</NuxtLink>
     </div>
+    <br>
     <Nuxt />
   </div>
 </template>
