@@ -4,7 +4,7 @@
     <div class="container">
       <NuxtLink to="/">Главная</NuxtLink>
       &nbsp;&nbsp;
-      <NuxtLink to="/headers-and-paragraphs">Заголовки и параграфы</NuxtLink>
+      <NuxtLink to="/headers-testing">Заголовки(тестирование)</NuxtLink>
     </div>
     <br>
     <Nuxt />
