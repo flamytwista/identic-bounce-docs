@@ -1,5 +1,5 @@
 {
-  "name": "naked-nuxt",
+  "name": "identic-bounce-docs",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "nakedcss": "^1.0.1",
+    "identic-bounce": "^1.0.1",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
