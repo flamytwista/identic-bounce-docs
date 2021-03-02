@@ -6,7 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "updateit": "sh ./updateit.sh"
   },
   "dependencies": {
     "core-js": "^3.8.3",
