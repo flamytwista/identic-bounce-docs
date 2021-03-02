@@ -1,6 +1,7 @@
 export default {
 
-  mode: 'spa',
+  // mode: 'spa',
+  ssr: false,
   router: {
     base: '/identic-bounce-docs/'
   },
