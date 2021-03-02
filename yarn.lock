@@ -3933,9 +3933,9 @@ icss-utils@^4.0.0, icss-utils@^4.1.1:
     postcss "^7.0.14"
 
 identic-bounce@^1.0.1:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/identic-bounce/-/identic-bounce-1.0.5.tgz#faa412857527feac39e59b8e4be9c925e91da00b"
-  integrity sha512-yP+1xXUFl8pRQjg2buQ18pBBqMMtVhsTrqpFwyAqFTQKxEuTMMeF//1RlAb159m0V47LZ8eIQj3PMYOvcQT2eA==
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/identic-bounce/-/identic-bounce-1.0.11.tgz#4a3ac168ee5c8ef71e59049e0437ed52c110cd6e"
+  integrity sha512-iJhEh1f90q7y94uq2xz4EVZG/MPj/3p0iaNHOpg5Ld0422Uw5Bex1mGbwiZ1l1eP/fppV9qyBcWknxz5nLupDw==
   dependencies:
     normalize.css "^8.0.1"
 
