@@ -1,10 +1,11 @@
 export default {
 
   // mode: 'spa',
-  ssr: false,
+  // ssr: false,
   router: {
-    // base: '/identic-bounce-docs/'
+    base: '/identic-bounce-docs/'
   },
+  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
