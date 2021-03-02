@@ -3,7 +3,7 @@ export default {
   // mode: 'spa',
   ssr: false,
   router: {
-    base: '/identic-bounce-docs/'
+    // base: '/identic-bounce-docs/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
