@@ -1,4 +1,10 @@
 export default {
+
+  mode: 'spa',
+  router: {
+    base: '/identic-bounce-docs/'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'naked-nuxt',
