@@ -3932,6 +3932,13 @@ icss-utils@^4.0.0, icss-utils@^4.1.1:
   dependencies:
     postcss "^7.0.14"
 
+identic-bounce@^1.0.1:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/identic-bounce/-/identic-bounce-1.0.4.tgz#6cbd0a1a175cf9eb56a543e024d624e45a16d27a"
+  integrity sha512-JwGf4lXpN5FmzhKK2/oqQ3H/S8bHr9H7iJMdG9xQe+AUd260JU9+eI9v+Fa/ybltE3AjH1Dk2iqN2C86DNSDog==
+  dependencies:
+    normalize.css "^8.0.1"
+
 ieee754@^1.1.13, ieee754@^1.1.4:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
@@ -4822,13 +4829,6 @@ mute-stream@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
-
-nakedcss@^1.0.1:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/nakedcss/-/nakedcss-1.0.4.tgz#ae02b6b7f010aa896a00d6fa16d6039f92346f69"
-  integrity sha512-sEUUx/8Ndq22qVB3Y0DB5kjInv6KRmUTxCPkrWzkVxe6duTMOYpTfYzi0YAMUITEeVhIqe0nsnIaKtMhg0gxqw==
-  dependencies:
-    normalize.css "^8.0.1"
 
 nan@^2.12.1:
   version "2.14.2"
