@@ -3220,7 +3220,7 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-"endent@github:dword-design/endent#fork":
+endent@dword-design/endent#fork:
   version "1.4.0"
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:
@@ -5595,6 +5595,11 @@ pbkdf2@^3.0.3:
     ripemd160 "^2.0.1"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+performant-array-to-tree@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/performant-array-to-tree/-/performant-array-to-tree-1.8.1.tgz#9748cccc0db7f068e5cd4df86a04fe0ee3428176"
+  integrity sha512-Lh3NddecUKVZ7Eims6Im5gyo2IXTFAxcHc14gHXhzP13VD17Seka1hASrwnMGz4Hr2hs+Ww6K5B2BF/627vNoQ==
 
 picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.2.1:
   version "2.2.2"

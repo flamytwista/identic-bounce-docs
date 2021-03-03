@@ -12,17 +12,14 @@
 </template>
 
 <script>
+
+import {arrayToTree} from 'performant-array-to-tree'
+
 export default {
-  mounted(){
-    // console.log(this.$router.options.routes); console.log('^...this.$router.options.routes:')
-  },
+  mounted(){},
   created() {
-    // вход
-    // 0: {path: "/typo", meta: {…}, name: "typo", component: ƒ}
-    // 1: {path: "/forms/buttons", meta: {…}, name: "forms-buttons", component: ƒ}
-    // 2: {path: "/forms/inputs", meta: {…}, name: "forms-inputs", component: ƒ}
-    // 3: {path: "/typo/headers-testing", meta: {…}, name: "typo-headers-testing", component: ƒ}
-    // 4: {path: "/", meta: {…}, name: "index", component: ƒ}
+
+    // todo:: всю эту хрень касательно составления json для меню вынести в отдельную функцию.
     this.$router.options.routes.forEach(route => {
       this.menuItems.push({
         name: route.name,
@@ -37,34 +34,24 @@ export default {
     routes.sort((a, b) => a.path.localeCompare(b.path))
     routes[0].path = '/index' // позже должно быть заменено обратно на '/'
 
-    let menuItems = routes.map(route=>{
+    let menuItemsFlat = routes.map(route=>{
+      let slugs = route.path.split('/')
+      slugs.shift()
+      let currentSlug = slugs[slugs.length - 1]
+      let parentSlug = slugs[slugs.length - 2] || null
       return {
-        
+        currentSlug,
+        parentSlug,
+        routeName: route.name,
+        menuTitle: route.meta.menuTitle,
+        menuWithoutLink: route.meta.menuWithoutLink || false
       }
     })
 
-    console.log(routes); console.log('^...routes:')
-    // Выход
-    let yo = [
-      {
-        menuTitle: '',
-        routeName: 'index',
-      },
-      {
-        menuTitle: '',
-        routeName: 'typo',
-        children: [
-          {
-            menuTitle: '',
-            routeName: 'typo-headers-testing'
-          }
-        ]
-      },
-      {
-
-      }
-
-    ]
+    let menuItemsTree = arrayToTree(menuItemsFlat, {
+      id: "currentSlug", parentId: "parentSlug", dataField: null
+    })
+    // console.log(menuItemsTree); console.log('^...menuItemsTree:')
   }
   , data() {
     return {
