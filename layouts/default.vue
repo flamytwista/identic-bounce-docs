@@ -34,7 +34,7 @@ export default {
     routes.sort((a, b) => a.path.localeCompare(b.path))
     routes[0].path = '/index' // позже должно быть заменено обратно на '/'
 
-    console.log(routes); console.log('^...routes:')
+    // console.log(routes); console.log('^...routes:')
 
     let menuItemsFlat = routes.map(route=>{
       let slugs = route.path.split('/')
