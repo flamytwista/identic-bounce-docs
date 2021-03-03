@@ -1,5 +1,8 @@
 <template>
   <div>
+    <left-menu
+      :menu-items="menuItems"
+    ></left-menu>
     <br>
     <div class="container">
       <NuxtLink to="/">Главная</NuxtLink>
@@ -20,6 +23,7 @@ export default {
   created() {
 
     // todo:: всю эту хрень касательно составления json для меню вынести в отдельную функцию.
+    // todo:: Сделать коммент что это канает только для нединамических маршрутов.
     this.$router.options.routes.forEach(route => {
       this.menuItems.push({
         name: route.name,
@@ -51,7 +55,8 @@ export default {
     let menuItemsTree = arrayToTree(menuItemsFlat, {
       id: "currentSlug", parentId: "parentSlug", dataField: null
     })
-    // console.log(menuItemsTree); console.log('^...menuItemsTree:')
+
+    this.menuItems = menuItemsTree
   }
   , data() {
     return {
