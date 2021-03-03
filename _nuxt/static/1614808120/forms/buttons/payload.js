@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/forms/buttons", {data:[{}],fetch:[],mutations:void 0});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/typo/headers-testing", {data:[{}],fetch:[],mutations:void 0});
