@@ -35,7 +35,16 @@
 </template>
 
 <script>
-export default {}
+export default {
+  meta: {
+    theme: 'dark'
+  },
+  data() {
+    return {
+      menuName: 'trololo'
+    }
+  }
+}
 </script>
 
 <style lang="scss">

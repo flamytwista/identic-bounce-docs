@@ -6,7 +6,22 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'root-page',
+  head: {
+    title: 'Page title',
+    meta: [
+      {
+        hid: 'description', name: 'description',
+        content: 'Page description'
+      }
+    ],
+    // ...
+  },
+  meta: {
+    theme: 'orange'
+  },
+}
 </script>
 
 <style lang="scss">
