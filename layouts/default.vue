@@ -15,8 +15,6 @@
 export default {
   mounted(){
     console.log(this.$router.options.routes); console.log('^...this.$router.options.routes:')
-    console.log(this.$router); console.log('^...this.$router:')
-    console.log(this.$router.matcher.getRoutes()); console.log('^...this.$router.matcher.getRoutes():')
   },
   created() {
     this.$router.options.routes.forEach(route => {
