@@ -6,7 +6,7 @@
 <script>
 
 export default {
-  menuTitle: 'Типографика',
+  menuTitle: 'Формы',
   menuWithoutLink: true,
 }
 </script>

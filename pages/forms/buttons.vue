@@ -7,7 +7,7 @@
 <script>
 
 export default {
-
+  menuTitle: 'Кнопки',
 }
 </script>
 

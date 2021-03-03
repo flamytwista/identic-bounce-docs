@@ -3,14 +3,10 @@
     <left-menu
       :menu-items="menuItems"
     ></left-menu>
-    <br>
     <div class="container">
-      <NuxtLink to="/">Главная</NuxtLink>
-      &nbsp;&nbsp;
-      <NuxtLink to="/headers-testing">Заголовки(тестирование)</NuxtLink>
+      <h1>{{$route.meta.menuTitle}}</h1>
+      <Nuxt />
     </div>
-    <br>
-    <Nuxt />
   </div>
 </template>
 
