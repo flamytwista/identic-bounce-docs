@@ -1,6 +1,5 @@
 <template>
-  <div class="typo-index">
-    <p>индекс типографики</p>
+  <div class="forms-index">
   </div>
 </template>
 
@@ -8,9 +7,10 @@
 
 export default {
   menuTitle: 'Типографика',
+  menuWithoutLink: true,
 }
 </script>
 
 <style scoped lang="scss">
-.typo-index {}
+.forms-index {}
 </style>

@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  pageTitle: 'Главная',
+  menuTitle: 'Главная',
 }
 </script>
 

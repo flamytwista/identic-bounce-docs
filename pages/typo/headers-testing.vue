@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  pageTitle: 'Заголовки',
+  menuTitle: 'Заголовки',
   data() {
     return {
     }
