@@ -1,7 +1,8 @@
 <template>
   <div class="left-menu-item">
 
-    <nuxt-link v-if="!menuItem.menuWithoutLink" :to="{name: menuItem.routeName}">{{menuItem.menuTitle}}</nuxt-link>
+    <!--<nuxt-link v-if="!menuItem.menuWithoutLink" :to="{name: menuItem.routeName}">{{menuItem.menuTitle}}</nuxt-link>-->
+    <nuxt-link v-if="!menuItem.menuWithoutLink" :to="menuItem.routePath">{{menuItem.menuTitle}}</nuxt-link>
     <a v-if="menuItem.menuWithoutLink">{{menuItem.menuTitle}}</a>
 
     <template

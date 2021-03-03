@@ -34,6 +34,8 @@ export default {
     routes.sort((a, b) => a.path.localeCompare(b.path))
     routes[0].path = '/index' // позже должно быть заменено обратно на '/'
 
+    console.log(routes); console.log('^...routes:')
+
     let menuItemsFlat = routes.map(route=>{
       let slugs = route.path.split('/')
       slugs.shift()
@@ -42,7 +44,8 @@ export default {
       return {
         currentSlug,
         parentSlug,
-        routeName: route.name,
+        // routeName: route.name,
+        routePath: (route.path === '/index') ? '/' : route.path,
         menuTitle: route.meta.menuTitle,
         menuWithoutLink: route.meta.menuWithoutLink || false
       }
