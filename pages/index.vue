@@ -2,25 +2,16 @@
   <div class="container">
 
     <h1>Главная</h1>
+    <hr>
+    <!--meta: {{meta}}-->
+    <!--<hr>-->
+    <!--head: {{head}}-->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'root-page',
-  head: {
-    title: 'Page title',
-    meta: [
-      {
-        hid: 'description', name: 'description',
-        content: 'Page description'
-      }
-    ],
-    // ...
-  },
-  meta: {
-    theme: 'orange'
-  },
+  pageTitle: 'Главная',
 }
 </script>
 

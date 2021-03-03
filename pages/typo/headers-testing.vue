@@ -36,12 +36,9 @@
 
 <script>
 export default {
-  meta: {
-    theme: 'dark'
-  },
+  pageTitle: 'Заголовки',
   data() {
     return {
-      menuName: 'trololo'
     }
   }
 }

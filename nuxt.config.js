@@ -41,6 +41,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    ['nuxt-route-meta', {
+      additionalProperties: ['pageTitle'],
+    }],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
