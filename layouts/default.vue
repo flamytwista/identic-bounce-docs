@@ -53,6 +53,7 @@ export default {
     })
 
     this.menuItems = menuItemsTree
+    routes[0].path = '/'  // Меняю обратно, без этого не работает nuxt generate
   }
   , data() {
     return {
