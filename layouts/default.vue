@@ -1,17 +1,69 @@
 <template>
   <div>
-    <br>
+    <left-menu
+      :menu-items="menuItems"
+    ></left-menu>
     <div class="container">
-      <NuxtLink to="/">Главная</NuxtLink>
-      &nbsp;&nbsp;
-      <NuxtLink to="/headers-testing">Заголовки(тестирование)</NuxtLink>
+      <h1>{{$route.meta.menuTitle}}</h1>
+      <Nuxt />
     </div>
-    <br>
-    <Nuxt />
   </div>
 </template>
 
+<script>
+
+import {arrayToTree} from 'performant-array-to-tree'
+
+export default {
+  mounted(){},
+  created() {
+
+    // todo:: всю эту хрень касательно составления json для меню вынести в отдельную функцию.
+    // todo:: Сделать коммент что это канает только для нединамических маршрутов.
+    this.$router.options.routes.forEach(route => {
+      this.menuItems.push({
+        name: route.name,
+        path: route.path
+      })
+    })
+
+    let routes = this.$router.options.routes
+
+
+
+    routes.sort((a, b) => a.path.localeCompare(b.path))
+    routes[0].path = '/index' // позже должно быть заменено обратно на '/'
+
+    let menuItemsFlat = routes.map(route=>{
+      let slugs = route.path.split('/')
+      slugs.shift()
+      let currentSlug = slugs[slugs.length - 1]
+      let parentSlug = slugs[slugs.length - 2] || null
+      return {
+        currentSlug,
+        parentSlug,
+        routeName: route.name,
+        menuTitle: route.meta.menuTitle,
+        menuWithoutLink: route.meta.menuWithoutLink || false
+      }
+    })
+
+    let menuItemsTree = arrayToTree(menuItemsFlat, {
+      id: "currentSlug", parentId: "parentSlug", dataField: null
+    })
+
+    this.menuItems = menuItemsTree
+  }
+  , data() {
+    return {
+      menuItems: []
+    }
+  }
+}
+</script>
+
 <style>
+
 html {
   font-family:
     'Source Sans Pro',
@@ -38,32 +90,4 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
 </style>

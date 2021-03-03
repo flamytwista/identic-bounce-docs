@@ -35,7 +35,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  menuTitle: 'Заголовки',
+  data() {
+    return {
+    }
+  }
+}
 </script>
 
 <style lang="scss">
